@@ -1,0 +1,19 @@
+﻿@{
+    @model IEnumerable<Wikipages.Models.Business>
+
+<html>
+    <head>
+        <title>Businesses</title>
+    </head>
+    <body>
+        <h2>Businesses</h2>
+        <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+        <ul>
+            @foreach (var listItem in Model)
+            {
+                <li>@Html.DisplayFor(modelItem => listItem.Name)</li>
+            }
+        </ul>
+    </body>
+</html>
+}

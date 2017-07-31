@@ -1,0 +1,24 @@
+﻿@{
+
+@model IEnumerable<Wikipages.Models.Group>
+
+<html>
+<head>
+    <title>Wikipages</title>
+</head>
+<body>
+    <h2>Wikipages</h2>
+    <h4>@Html.DisplayNameFor(model => model.GroupName)</h4>
+    <ul>
+        @foreach (var listGroup in Model)
+        {
+            <li>
+                 @Html.DisplayFor(modelGroup => listGroup.GroupName)
+                 @Html.ActionLink("Details", "Details", new { id = listGroup.Id })
+            </li>
+        }
+    </ul>
+</body>
+</html>
+
+}
