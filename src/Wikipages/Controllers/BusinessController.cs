@@ -14,5 +14,11 @@ namespace Wikipages.Controllers
         {
             return View(db.Businesses.ToList());
         }
+
+        public IActionResult Details(int id)
+        {
+            var thisBusiness = db.Businesses.FirstOrDefault(business => business.Id == id);
+            return View(thisBusiness);
+        }
     }
 }
